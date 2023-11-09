@@ -1,0 +1,64 @@
+﻿<Window x:Class="WPF_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"        
+        x:Name="WPF_Calculator"
+        Title="WPF Calculator"
+        Height="300"
+        Width="250"        
+        WindowStartupLocation="CenterScreen"
+        TextOptions.TextFormattingMode="Display">
+    <WindowChrome.WindowChrome>
+        <WindowChrome UseAeroCaptionButtons="False" CaptionHeight="0" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
+        </Grid.RowDefinitions>
+        
+        <TextBlock Text="WPF Summator"
+                           FontFamily="Segoe UI"
+                           FontSize="12"
+                           VerticalAlignment="Center"
+                           Margin="8,1,0,0"/>
+        
+        <TextBox x:Name="GivenMath"
+                   Text="0"
+                   Grid.Row="1"
+                   Margin="4"
+                   Padding="4,2"
+                   FontFamily="Consolas"
+                   FontSize="11"
+                   VerticalAlignment="Center"
+                   Background="Gainsboro"/>
+
+        <TextBox x:Name="CalculatedMath"
+                   Text="0"
+                   Grid.Row="2"
+                   Margin="4"
+                   Padding="4,2"
+                   FontFamily="Consolas"
+                   FontSize="11"
+                   VerticalAlignment="Center"
+                   Background="Gainsboro"/>
+
+        <Grid Grid.Row="3"
+              Margin="6">
+            <Button Content="+"
+                    Grid.Column="3"
+                    FontFamily="Consolas"
+                    FontSize="12"
+                    Cursor="Hand"
+                    Focusable="False"
+                    Background="Gainsboro"
+                    BorderThickness="0"
+                    />
+        </Grid>
+    </Grid>
+</Window>
